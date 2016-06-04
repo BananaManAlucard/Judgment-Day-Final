@@ -1,6 +1,6 @@
 {
     "base_spec": "/pa/units/land/base_structure/base_structure.json",
-    "display_name": "!Advanced Bot Factory",
+    "display_name": "Advanced Bot Factory",
     "description": "Advanced manufacturing- Builds Advanced Fabrication Bots, and  Advanced Nuclear Missile Bots.",
     "max_health": 1000,
     "build_metal_cost": 500,
