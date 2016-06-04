@@ -1,0 +1,19 @@
+{
+    "enabled": true,
+    "context": "server",
+    "identifier": "com.pa.judgmentday",
+    "display_name": "Judgment Day- Nuclear Warfare",
+    "build": "79317",
+    "date": "2015/14/3",
+    "description": "Fallout all over again. This is a single planet server mod where the word nuke is overused A LOT. DISCLAMER- This mod can be hard to get into and some units may be more powerful than others, that's just how it is. Don't count on too much patching. As Zweistien made most of the forum stuff and i've had no contact with him whatsoever for some time, i'm guessing that the forum page linked will not be updated any time soon. Anyway, HAVE FUN with this 'nuclear mess' ",
+    "category": [
+        "in-game",
+        "server-mod"
+    ],
+    "author": "BananaManAlucard, Zweistein",
+    "version": "3.0",
+    "signature": "(not yet implemented)",
+    "forum": "https://forums.uberent.com/threads/wip-judgment-day-server-mod.68122/",
+    "icon": "https://farm8.staticflickr.com/7454/13126809294_eec76e7626_o.gif",
+    "priority": 100
+}

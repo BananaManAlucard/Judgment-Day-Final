@@ -1,0 +1,111 @@
+{
+    "display_name": "SATON Missile",
+    "description": "Supremely Advanced Totally Overpowered Nuclear missile. Made in hell.",
+    "has_notifications": true,
+    "ammo_type": "Projectile",
+    "build_metal_cost": 30000,
+    "flight_type": "Staged",
+    "damage": 10000,
+    "splash_damage": 5000,
+    "splash_radius": 350,
+    "full_damage_splash_radius": 200,
+    "splash_damages_allies": true,
+    "cruise_height": 200,
+    "initial_velocity": 5,
+    "max_velocity": 50,
+    "turn_rate": 90,
+    "lifetime": 0,
+    "show_strategic_icon": true,
+    "interplanetary_type": "INTER_System",
+    "system_velocity_multiplier": 20,
+    "gravwell_velocity_multiplier": 10,
+    "spawn_layers": "WL_Air",
+    "show_in_orbital_layer": true,
+    "splash_damage_orbital": true,
+    "enable_orbital_shell": true,
+    "burn_damage": 500,
+    "burn_radius": 500,
+    "influence_radius": 3200,
+	"events" : {
+		"collided" : {
+			"audio_cue" : "/SE/Impacts/missile_seeking",
+			"effect_spec" : "/pa/effects/specs/meteor_impact_explosion.pfx",
+			"effect_world_aligned" : false
+		}
+	},
+	"sim_impact_effect": "/pa/effects/specs/meteor_impact_explosion_ent.json",
+    "impact_decals": [
+        "/pa/effects/large_missile/nuke_SATON_scorch.json"
+    ],
+    "damage_volume": {
+        "initial_radius": 100,
+        "radius_velocity": 200,
+        "radius_accel": -40,
+        "delay": 1.5,
+        "burnable_remove_radius": 200
+    },
+    "model": {
+        "filename": "/pa/units/air/missile_orbital_booster/missile_orbital_booster.papa"
+    },
+    "unit_types": [
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Orbital"
+    ],
+    "collision_check": "ground",
+    "physics": {
+        "radius": 10,
+        "push_class": 1,
+        "gravity_scalar": 3,
+        "ignore_gravity": true,
+        "add_to_spatial_db": true,
+        "allow_underground": true
+    },
+    "fx_trail": {
+        "filename": "/pa/units/air/missile_nuke/missile_nuke_trail.pfx",
+        "offset": [
+            0,
+            13.8,
+            0
+        ]
+    },
+    "events": {
+        "collided": {
+            "audio_cue": "/SE/Impacts/missile_seeking",
+            "effect_spec": "/pa/units/air/missile_nuke/missile_nuke_implosion.pfx",
+            "effect_world_aligned": false
+        }
+    },
+    "audio_loop": "/SE/Movement/missile/nuke_missile_fly_loop",
+    "stage_on_planet_handoff": 2,
+    "stages": [
+        {
+            "ignores_gravity": true,
+            "ignores_LOS": true,
+            "stage_duration": 600,
+            "stage_turn_rate": 0,
+            "rotates_to_velocity": true
+        },
+        {
+            "ignores_gravity": true,
+            "ignores_LOS": true,
+            "stage_duration": 0,
+            "stage_turn_rate": 90,
+            "stage_change_range": 75,
+            "rotates_to_velocity": true
+        },
+        {
+            "ignores_gravity": false,
+            "ignores_LOS": false,
+            "stage_duration": 5000,
+            "stage_turn_rate": 90,
+            "rotates_to_velocity": true
+        },
+        {
+            "ignores_gravity": false,
+            "ignores_LOS": false,
+            "stage_duration": 5000,
+            "stage_turn_rate": 1080,
+            "rotates_to_velocity": true
+        }
+    ]
+}

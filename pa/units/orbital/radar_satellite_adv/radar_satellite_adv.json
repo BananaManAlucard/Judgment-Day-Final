@@ -1,0 +1,140 @@
+{
+    "base_spec": "/pa/units/orbital/base_orbital/base_orbital.json",
+    "display_name": "Omniscience Satellite",
+    "description": "Provides enoumous radar coverege of orbital layer and excellent coverege of ground layer.",
+    "max_health": 300,
+    "build_metal_cost": 3000,
+    "spawn_layers": "WL_Orbital",
+     "armor_type": "AT_Orbital",
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "consumption": {
+        "energy": 500
+    },
+    "energy_efficiency_requirement": 0.9,
+    "unit_types": [
+        "UNITTYPE_Structure",
+        "UNITTYPE_Orbital",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_Recon",
+        "UNITTYPE_FabOrbBuild"
+    ],
+    "command_caps": [
+        "ORDER_Move",
+        "ORDER_Patrol",
+        "ORDER_Assist"
+    ],
+    "physics": {
+        "radius": 5,
+        "push_class": 50,
+        "gravity_scalar": 0.001
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 500,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 250,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "orbital",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 400,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "orbital",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 800,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 75
+                },
+                {
+                    "layer": "celestial",
+                    "channel": "radar",
+                    "shape": "sphere",
+                    "radius": 1,
+                    "uses_energy": true
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv.papa",
+        "animations": {
+            "open": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_anim_open.papa",
+            "deploy": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_anim_deploy.papa",
+            "closed": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_anim_closed.papa"
+        },
+        "animtree": "/pa/anim/anim_trees/satellite_launched_anim_tree.json"
+    },
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/orbital"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/air/bomber_fire"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/orbital",
+            "effect_scale": 1.5
+        }
+    },
+    "fx_offsets": [
+        {
+            "type": "energy",
+            "filename": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_dish01_on.pfx",
+            "bone": "bone_radarPivot01"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_dish02_on.pfx",
+            "bone": "bone_radarPivot02"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_antenna_on.pfx",
+            "bone": "bone_antenna01"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_antenna_on.pfx",
+            "bone": "bone_antenna02"
+        }
+    ],
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/orbital/radar"
+        }
+    },
+    "mesh_bounds": [
+        25,
+        15,
+        15
+    ],
+    "TEMP_texelinfo": 22.7385
+}
