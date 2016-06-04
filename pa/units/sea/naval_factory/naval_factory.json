@@ -1,7 +1,7 @@
 {
     "base_spec": "/pa/units/land/base_structure/base_structure.json",
-    "display_name": "!LOC(units:naval_factory.message):Naval Factory",
-    "description": "!LOC(units:basic_manufacturing_builds_naval_units.message):Basic manufacturing- Builds naval units.",
+    "display_name": "Basic Naval Factory",
+    "description": "Basic manufacturing- Builds naval units.",
     "max_health": 500,
     "build_metal_cost": 200,
     "atrophy_rate": 10,

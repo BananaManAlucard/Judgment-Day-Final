@@ -1,6 +1,6 @@
 {
     "base_spec": "/pa/units/land/base_structure/base_structure.json",
-    "display_name": "Vehicle Factory",
+    "display_name": "Basic Vehicle Factory",
     "description": "Basic manufacturing- Builds land vehicles.",
     "max_health": 2500,
     "build_metal_cost": 200,
